@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.simbrella.loanservice.dtos.User;
 import org.simbrella.loanservice.dtos.requests.LoanApplicationRequest;
+import org.simbrella.loanservice.dtos.requests.UpdateLoanStatusRequest;
 import org.simbrella.loanservice.dtos.responses.LoanApplicationResponse;
 import org.simbrella.loanservice.exceptions.InvalidDetailsException;
 import org.simbrella.loanservice.exceptions.LoanTechException;
@@ -25,8 +26,6 @@ import java.time.Period;
 import static org.simbrella.loanservice.utils.LoanCalculator.calculateLoanDetails;
 import static org.simbrella.loanservice.utils.ValidationUtils.isValidEmail;
 
-//@Service
-//@AllArgsConstructor
 @Slf4j
 public class LoanServiceImpl implements LoanService {
     private final LoanRepository loanRepository;
@@ -51,7 +50,8 @@ public class LoanServiceImpl implements LoanService {
         LoanDetails loanDetails = calculateLoanDetails(request.getLoanAmount(), request.getLoanTermMonths(), request.getAnnualIncome());
         User user = fetchUserDetails(request.getEmail());
         Loan loan = saveLoanDetails(loanDetails, user.getId());
-        return mapToLoanApplicationResponse(loan);
+        log.info("Loan applied for by {}", user.getId());
+        return mapToLoanApplicationResponse(loan, user);
     }
 
     @Override
@@ -78,6 +78,27 @@ public class LoanServiceImpl implements LoanService {
         }
     }
 
+    @Override
+    public Loan getLoanDetails(String email) {
+        User user = fetchUserDetails(email);
+
+        return fetchLoanDetailsWith(user.getId());
+    }
+
+    @Override
+    public Loan updateLoanStatus(UpdateLoanStatusRequest request) {
+        return null;
+    }
+
+    private Loan getLoan(String loanId){
+        return loanRepository.findById(loanId)
+                .orElseThrow(() -> new NotFoundException(String.format("Loan with id: %s not found", loanId)));
+    }
+    private Loan fetchLoanDetailsWith(String userId) {
+        return loanRepository.findByUserId(userId)
+                .orElseThrow(() -> new NotFoundException("Loan with user provided does not exist"));
+    }
+
     private User fetchUserDetails(String email) {
         return getUser(email);
     }
@@ -90,8 +111,10 @@ public class LoanServiceImpl implements LoanService {
         return loanRepository.save(loan);
     }
 
-    private LoanApplicationResponse mapToLoanApplicationResponse(Loan loan) {
-        return modelMapper.map(loan, LoanApplicationResponse.class);
+    private LoanApplicationResponse mapToLoanApplicationResponse(Loan loan, User user) {
+        LoanApplicationResponse response = modelMapper.map(loan, LoanApplicationResponse.class);
+        response.setFullName(user.getFirstName() + user.getLastName());
+        return response;
     }
 
 

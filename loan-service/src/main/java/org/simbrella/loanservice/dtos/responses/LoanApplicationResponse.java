@@ -18,7 +18,7 @@ public class LoanApplicationResponse {
     private LocalDateTime applicationDate;
     private LocalDateTime approvalDate;
     private LoanStatus loanStatus;
-//    private String userId;
+    private String fullName;
     private BigDecimal monthlyInstallment;
     private BigDecimal totalInterest;
 }

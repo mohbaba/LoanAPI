@@ -4,27 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Apply for loan functionality">
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/config/MapperConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/config/WebClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/exceptions/InvalidDetailsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/exceptions/LoanTechException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/utils/LoanCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/utils/ValidationUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/utils/dtos/LoanDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loan-service/src/test/java/org/simbrella/loanservice/services/LoanServiceImplTest.java" afterDir="false" />
+    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Get user for loan validation functionality">
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/requests/UpdateLoanStatusRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/responses/GetLoanResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/requests/LoanApplicationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/requests/LoanApplicationRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/responses/LoanApplicationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/responses/LoanApplicationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/models/Loan.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/models/Loan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/repositories/LoanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/repositories/LoanRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/resources/secrets.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/resources/secrets.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/simbrella/userservice/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/simbrella/userservice/config/BeanConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -219,7 +206,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735896360950</updated>
-      <workItem from="1735896361970" duration="62306000" />
+      <workItem from="1735896361970" duration="64638000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -253,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735999973539</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added: Get user for loan validation functionality">
+      <option name="closed" value="true" />
+      <created>1736016455354</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736016455354</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +259,8 @@
     <MESSAGE value="Refactored: Gateway and JWT authentication" />
     <MESSAGE value="Added: Loan service and configuration" />
     <MESSAGE value="Added: Apply for loan functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: Apply for loan functionality" />
+    <MESSAGE value="Added: Get user for loan validation functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: Get user for loan validation functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
