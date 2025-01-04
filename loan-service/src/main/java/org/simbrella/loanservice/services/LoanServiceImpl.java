@@ -23,6 +23,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 
+import static org.simbrella.loanservice.models.LoanStatus.*;
 import static org.simbrella.loanservice.utils.LoanCalculator.calculateLoanDetails;
 import static org.simbrella.loanservice.utils.ValidationUtils.isValidEmail;
 
@@ -51,6 +52,7 @@ public class LoanServiceImpl implements LoanService {
         User user = fetchUserDetails(request.getEmail());
         Loan loan = saveLoanDetails(loanDetails, user.getId());
         log.info("Loan applied for by {}", user.getId());
+        log.info("Loan with id: {} is pending", loan.getId());
         return mapToLoanApplicationResponse(loan, user);
     }
 
@@ -87,7 +89,37 @@ public class LoanServiceImpl implements LoanService {
 
     @Override
     public Loan updateLoanStatus(UpdateLoanStatusRequest request) {
-        return null;
+        Loan loan = getLoan(request.getLoanId());
+        switch (request.getLoanStatus()){
+            case APPROVED -> loan = approveLoan(loan);
+            case REJECTED -> loan = rejectLoan(loan);
+            case REPAID ->  loan = setLoanToRepaid(loan);
+            case DEFAULTED -> loan = setLoanToDefaulted(loan);
+        }
+        return loan;
+    }
+
+    private Loan approveLoan(Loan loan){
+        loan.setLoanStatus(LoanStatus.APPROVED);
+        loan.setApprovalDate(LocalDateTime.now());
+        log.info("Loan with id: {} approved on {}", loan.getId(), loan.getApprovalDate());
+        return loanRepository.save(loan);
+    }
+
+    private Loan rejectLoan(Loan loan){
+        loan.setLoanStatus(REJECTED);
+        log.info("Loan with id: {} rejected on {}", loan.getId(), LocalDateTime.now());
+        return loanRepository.save(loan);
+    }
+    private Loan setLoanToRepaid(Loan loan){
+        loan.setLoanStatus(REPAID);
+        log.info("Loan with id: {} repaid on {}", loan.getId(), LocalDateTime.now());
+        return loanRepository.save(loan);
+    }
+    private Loan setLoanToDefaulted(Loan loan){
+        loan.setLoanStatus(DEFAULTED);
+        log.info("Loan with id: {} defaulted on {}", loan.getId(), LocalDateTime.now());
+        return loanRepository.save(loan);
     }
 
     private Loan getLoan(String loanId){
