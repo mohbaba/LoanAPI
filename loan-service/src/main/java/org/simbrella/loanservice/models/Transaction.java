@@ -20,6 +20,7 @@ import static java.time.LocalDateTime.now;
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(name = "transactions")
 public class Transaction {
     @Id
     @GeneratedValue(strategy = UUID)

@@ -19,6 +19,7 @@ import static java.time.LocalDateTime.now;
 @AllArgsConstructor
 @Builder
 @Entity
+@Table(name = "loans")
 public class Loan {
     @Id
     @GeneratedValue(strategy = UUID)
@@ -28,6 +29,7 @@ public class Loan {
     private LocalDateTime applicationDate;
     private LocalDateTime approvalDate;
     private LoanStatus loanStatus;
+    private String userId;
 
     @Setter(AccessLevel.NONE)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
