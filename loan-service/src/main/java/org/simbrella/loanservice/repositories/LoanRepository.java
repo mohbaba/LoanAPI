@@ -1,9 +1,7 @@
-package org.simbrella.userservice.repositories;
+package org.simbrella.loanservice.repositories;
 
-import org.simbrella.userservice.models.Loan;
+import org.simbrella.loanservice.models.Loan;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.UUID;
 
 public interface LoanRepository extends JpaRepository<Loan, String> {
 }

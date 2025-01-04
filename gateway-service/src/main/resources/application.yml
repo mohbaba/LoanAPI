@@ -4,10 +4,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: wallet-route
-          uri: lb://WALLET-API
+        - id: loan-route
+          uri: lb://LOAN-SERVICE
           predicates:
-            - Path=/wallet/**
+            - Path=/api/v1/loans/**
           filters:
             - PrefixPath=/api/v1
 

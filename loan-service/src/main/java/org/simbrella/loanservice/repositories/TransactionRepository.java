@@ -1,9 +1,7 @@
-package org.simbrella.userservice.repositories;
+package org.simbrella.loanservice.repositories;
 
-import org.simbrella.userservice.models.Transaction;
+import org.simbrella.loanservice.models.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.UUID;
 
 public interface TransactionRepository extends JpaRepository<Transaction, String> {
 }

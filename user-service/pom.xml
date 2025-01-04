@@ -17,11 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin-version>3.13.0</maven-compiler-plugin-version>
     </properties>
-    <description>An API that enables seamless integration of loan services, allowing applications to handle loan
-        applications, approvals, disbursements, and repayments. It provides endpoints for calculating eligibility,
-        retrieving personalized loan offers, tracking repayment schedules, and ensuring secure transactions, making it
-        easy to embed loan functionalities into various platforms.
-    </description>
+
     <url/>
     <licenses>
         <license/>

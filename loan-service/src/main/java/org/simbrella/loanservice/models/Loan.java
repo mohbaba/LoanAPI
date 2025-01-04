@@ -1,4 +1,4 @@
-package org.simbrella.userservice.models;
+package org.simbrella.loanservice.models;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

@@ -1,4 +1,4 @@
-package org.simbrella.userservice.models;
+package org.simbrella.loanservice.models;
 
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -11,7 +11,6 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
 import static jakarta.persistence.GenerationType.UUID;
 import static java.time.LocalDateTime.now;
 

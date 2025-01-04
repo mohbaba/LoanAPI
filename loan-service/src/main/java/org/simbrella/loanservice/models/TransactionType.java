@@ -1,4 +1,4 @@
-package org.simbrella.userservice.models;
+package org.simbrella.loanservice.models;
 
 public enum TransactionType {
     LOAN_DISBURSEMENT,
