@@ -12,10 +12,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LoanApplicationResponse {
+    private String loanId;
     private BigDecimal amount;
     private Float interestRate;
     private LocalDateTime applicationDate;
     private LocalDateTime approvalDate;
     private LoanStatus loanStatus;
-    private String userId;
+//    private String userId;
+    private BigDecimal monthlyInstallment;
+    private BigDecimal totalInterest;
 }

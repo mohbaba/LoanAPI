@@ -13,4 +13,6 @@ public class BeanConfig {
     public AuthService authService(Keycloak keycloak){
         return new AuthServiceImpl(keycloak);
     }
+
+
 }

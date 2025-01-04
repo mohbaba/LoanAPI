@@ -24,12 +24,15 @@ public class Loan {
     @Id
     @GeneratedValue(strategy = UUID)
     private String id;
-    private BigDecimal amount;
-    private Float interestRate;
+    private BigDecimal loanAmount;
+    private BigDecimal interestRate;
     private LocalDateTime applicationDate;
     private LocalDateTime approvalDate;
     private LoanStatus loanStatus;
     private String userId;
+    private BigDecimal monthlyInstallment;
+    private Integer loanTermMonths;
+    private BigDecimal totalInterest;
 
     @Setter(AccessLevel.NONE)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -43,13 +46,13 @@ public class Loan {
 
 
     @PrePersist
-    private void setTimeCreated(){
-        timeCreated=now();
+    private void setTimeCreated() {
+        timeCreated = now();
     }
 
     @PreUpdate
-    private void setTimeUpdated(){
-        timeUpdated=now();
+    private void setTimeUpdated() {
+        timeUpdated = now();
     }
 
 
