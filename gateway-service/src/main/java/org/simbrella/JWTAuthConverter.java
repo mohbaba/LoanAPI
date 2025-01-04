@@ -12,25 +12,28 @@ import org.springframework.security.oauth2.jwt.JwtClaimNames;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.stereotype.Component;
+import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 @Component
 @RequiredArgsConstructor
-public class JWTAuthConverter implements Converter<Jwt, AbstractAuthenticationToken> {
+public class JWTAuthConverter implements Converter<Jwt, Mono<AbstractAuthenticationToken>> {
 
     private final JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
 
     @Override
-    public AbstractAuthenticationToken convert(@NonNull Jwt jwt) {
+    public Mono<AbstractAuthenticationToken> convert(@NonNull Jwt jwt) {
+        // Extract authorities as before
         Collection<GrantedAuthority> authorities = Stream.concat(
                 jwtGrantedAuthoritiesConverter.convert(jwt).stream(),
                 extractResourceRoles(jwt).stream()).collect(Collectors.toSet());
-        return new JwtAuthenticationToken(jwt, authorities, getPrincipalClaimName(jwt));
+
+        // Return a Mono that wraps the JwtAuthenticationToken
+        return Mono.just(new JwtAuthenticationToken(jwt, authorities, getPrincipalClaimName(jwt)));
     }
 
     private String getPrincipalClaimName(Jwt jwt) {
@@ -58,7 +61,6 @@ public class JWTAuthConverter implements Converter<Jwt, AbstractAuthenticationTo
             realmRoles = (Collection<String>) realmAccess.get("roles");
             allRoles.addAll(realmRoles);
         }
-
 
         return allRoles.stream()
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role))

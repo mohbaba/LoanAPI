@@ -14,26 +14,29 @@ spring:
         - id: identity-route
           uri: lb://USER-SERVICE
           predicates:
-            Path=/users/**
+            - Path=/api/v1/users/**
           filters:
-            - PrefixPath=/api/v1
-#            - AddResponseHeader=X-powered-by,Maver Gateway Service
+            # Uncomment if you need these filters
+            # - PrefixPath=/api/v1
+            # - AddResponseHeader=X-powered-by,Maver Gateway Service
 
       discovery:
         locator:
           enabled: true
   main:
     web-application-type: reactive
-
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: http://localhost:9081/realms/WalletAPI
-          jwk-set-uri: http://localhost:9081/auth/realms/WalletAPI/protocol/openid-connect/certs
+          jwk-set-uri: http://localhost:9081/realms/WalletAPI/protocol/openid-connect/certs
 
-
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.loadbalancer: DEBUG
 
 server:
   port: 8083
-
