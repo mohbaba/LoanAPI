@@ -4,18 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Loan service tests">
-      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/simbrella/userservice/config/SwaggerConfig.java" afterDir="false" />
+    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Swagger config">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/org/simbrella/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/org/simbrella/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/controllers/LoanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/controllers/LoanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/LoanApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/LoanApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/config/SwaggerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/simbrella/userservice/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/simbrella/userservice/config/SwaggerConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,69 +33,69 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2r73b2BR8flKsbQgPCHrFcysZz8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.LoanCalculator.executor": "Run",
-    "JUnit.AuthServiceImplTest.executor": "Run",
-    "JUnit.AuthServiceImplTest.testLoginUser.executor": "Run",
-    "JUnit.LoanServiceImplTest.applyForLoan.executor": "Run",
-    "JUnit.LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse.executor": "Run",
-    "JUnit.LoanServiceImplTest.executor": "Run",
-    "JUnit.LoanServiceImplTest.getUser.executor": "Run",
-    "JUnit.UserControllerTest.executor": "Run",
-    "JUnit.UserControllerTest.testDeleteUser.executor": "Run",
-    "JUnit.UserControllerTest.testGetUser.executor": "Run",
-    "JUnit.UserControllerTest.testLoginUser.executor": "Run",
-    "JUnit.UserControllerTest.testRegisterUser.executor": "Run",
-    "JUnit.UserServiceImplTest.executor": "Coverage",
-    "JUnit.UserServiceImplTest.getNonExistingUserTest.executor": "Run",
-    "JUnit.UserServiceImplTest.getUser.executor": "Run",
-    "JUnit.UserServiceImplTest.testDeleteUser.executor": "Run",
-    "JUnit.UserServiceImplTest.testLoginUser.executor": "Run",
-    "JUnit.UserServiceImplTest.testRegisterUser.executor": "Run",
-    "JUnit.UserServiceImplTest.testRegisterUserWithBadPassword.executor": "Run",
-    "JUnit.UserServiceImplTest.testRegisterUserWithExistingEmail.executor": "Run",
-    "JUnit.UserServiceImplTest.testRegisterUserWithIncorrectEmail.executor": "Run",
-    "JUnit.UserServiceImplTest.testRegisterUserWithIncorrectPhoneNumber.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.GatewayApplication.executor": "Run",
-    "Spring Boot.IdentityApplication.executor": "Run",
-    "Spring Boot.LoanApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ENVY/Desktop/SIMBRELLA2/loantech/user-service/src/test/java/org/simbrella/userservice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/ENVY/Desktop/SIMBRELLA2/loantech/transaction-service/src/main/java/org/simbrella/Main.java",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LoanCalculator.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthServiceImplTest.testLoginUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanServiceImplTest.applyForLoan.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LoanServiceImplTest.getUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.testDeleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.testGetUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.testLoginUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserControllerTest.testRegisterUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.UserServiceImplTest.getNonExistingUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.getUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testDeleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testLoginUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testRegisterUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testRegisterUserWithBadPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testRegisterUserWithExistingEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testRegisterUserWithIncorrectEmail.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.testRegisterUserWithIncorrectPhoneNumber.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.IdentityApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.LoanApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ENVY/Desktop/SIMBRELLA2/loantech/user-service/src/test/java/org/simbrella/userservice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ENVY/Desktop/SIMBRELLA2/loantech/transaction-service/src/main/java/org/simbrella/Main.java&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ENVY\Desktop\SIMBRELLA2\loantech\user-service\src\test\java\org\simbrella\userservice" />
@@ -128,7 +127,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoanServiceImplTest">
+  <component name="RunManager" selected="Spring Boot.LoanApplication">
     <configuration name="LoanServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="loan-service" />
       <extension name="coverage">
@@ -144,61 +143,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanServiceImplTest.applyForLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="loan-service" />
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="eureka-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.servicediscovery.EurekaServerApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
+          <option name="PATTERN" value="org.simbrella.servicediscovery.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
-      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
-      <option name="METHOD_NAME" value="applyForLoan" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="loan-service" />
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.GatewayApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
+          <option name="PATTERN" value="org.simbrella.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
-      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
-      <option name="METHOD_NAME" value="applyForLoan_validRequest_returnsLoanApplicationResponse" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanServiceImplTest.getUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="loan-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
-      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
-      <option name="METHOD_NAME" value="getUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdentityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.userservice.IdentityApplication" />
+      <module name="loan-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.loanservice.LoanApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.simbrella.userservice.*" />
+          <option name="PATTERN" value="org.simbrella.loanservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -208,11 +185,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.IdentityApplication" />
+        <item itemvalue="Spring Boot.LoanApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.EurekaServerApplication" />
         <item itemvalue="JUnit.LoanServiceImplTest" />
-        <item itemvalue="JUnit.LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse" />
-        <item itemvalue="JUnit.LoanServiceImplTest.getUser" />
-        <item itemvalue="JUnit.LoanServiceImplTest.applyForLoan" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +200,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735896360950</updated>
-      <workItem from="1735896361970" duration="83838000" />
+      <workItem from="1735896361970" duration="84845000" />
+      <workItem from="1736083898317" duration="637000" />
+      <workItem from="1736084574501" duration="590000" />
+      <workItem from="1736085661002" duration="2913000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -290,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736079498161</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added: Swagger config">
+      <option name="closed" value="true" />
+      <created>1736082799598</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736082799598</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +292,8 @@
     <MESSAGE value="Added: Get Loan details by user" />
     <MESSAGE value="Added: Update loan status functionality" />
     <MESSAGE value="Added: Loan service tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: Loan service tests" />
+    <MESSAGE value="Added: Swagger config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: Swagger config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

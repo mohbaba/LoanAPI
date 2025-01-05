@@ -8,6 +8,7 @@ spring:
           uri: lb://LOAN-SERVICE
           predicates:
             - Path=/api/v1/loans/**
+#            - Path=/
           filters:
         #            - PrefixPath=/api/v1
         - id: identity-route
@@ -22,12 +23,12 @@ spring:
         - id: loan-service-swagger
           uri: lb://LOAN-SERVICE
           predicates:
-            - Path=/loan-service/swagger-ui/**
+            - Path=/loan-service/swagger-ui.html/**
 
         - id: user-service-swagger
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/user-service/swagger-ui/**
+            - Path=/user-service/swagger-ui.html/**
       discovery:
         locator:
           enabled: true
