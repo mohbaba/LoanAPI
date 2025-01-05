@@ -33,7 +33,7 @@ public class LoanController {
     }
 
     @GetMapping("/{email}")
-    public ResponseEntity<Loan> getLoanDetails(@PathVariable String email) {
+    public ResponseEntity<Loan> getLoanDetails(@PathVariable("email") String email) {
         try {
             Loan loan = loanService.getLoanDetails(email);
             return ResponseEntity.ok(loan);
@@ -50,7 +50,7 @@ public class LoanController {
             Loan updatedLoan = loanService.updateLoanStatus(request);
             return ResponseEntity.ok(updatedLoan);
         } catch (NotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // Return 404 Not Found
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         } catch (LoanTechException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null); // Return 500 Internal Server Error
         }

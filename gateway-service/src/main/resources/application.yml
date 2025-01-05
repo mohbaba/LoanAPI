@@ -9,20 +9,29 @@ spring:
           predicates:
             - Path=/api/v1/loans/**
           filters:
-            - PrefixPath=/api/v1
-
+        #            - PrefixPath=/api/v1
         - id: identity-route
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/v1/users/**
           filters:
-            # Uncomment if you need these filters
-            # - PrefixPath=/api/v1
-            # - AddResponseHeader=X-powered-by,Maver Gateway Service
+          # Uncomment if needed
+          # - PrefixPath=/api/v1
+          # - AddResponseHeader=X-powered-by,Maver Gateway Service
 
+        - id: loan-service-swagger
+          uri: lb://LOAN-SERVICE
+          predicates:
+            - Path=/loan-service/swagger-ui/**
+
+        - id: user-service-swagger
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/swagger-ui/**
       discovery:
         locator:
           enabled: true
+
   main:
     web-application-type: reactive
   security:
@@ -40,3 +49,12 @@ logging:
 
 server:
   port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
