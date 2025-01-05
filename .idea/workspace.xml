@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Get Loan details by user">
+    <list default="true" id="e25df098-2930-444b-ab1e-9beef6bff93e" name="Changes" comment="Added: Update loan status functionality">
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/controllers/LoanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/test/java/org/simbrella/loanservice/AbstractTestContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan-service/src/test/java/org/simbrella/loanservice/controllers/LoanControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/requests/UpdateLoanStatusRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/dtos/requests/UpdateLoanStatusRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/services/LoanServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/utils/LoanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/main/java/org/simbrella/loanservice/utils/LoanCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loan-service/src/test/java/org/simbrella/loanservice/services/LoanServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/loan-service/src/test/java/org/simbrella/loanservice/services/LoanServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -38,8 +48,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.LoanCalculator.executor": "Run",
     "JUnit.AuthServiceImplTest.executor": "Run",
     "JUnit.AuthServiceImplTest.testLoginUser.executor": "Run",
+    "JUnit.LoanServiceImplTest.applyForLoan.executor": "Run",
+    "JUnit.LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse.executor": "Run",
+    "JUnit.LoanServiceImplTest.executor": "Run",
     "JUnit.LoanServiceImplTest.getUser.executor": "Run",
     "JUnit.UserControllerTest.executor": "Run",
     "JUnit.UserControllerTest.testDeleteUser.executor": "Run",
@@ -93,11 +107,14 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.simbrella.loanservice.controllers" />
       <recent name="org.simbrella.loanservice.services" />
       <recent name="org.simbrella.userservice.controllers" />
       <recent name="org.simbrella.userservice.services" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.simbrella.loanservice.dtos" />
+      <recent name="org.simbrella.loanservice" />
       <recent name="org.simbrella.loanservice.exceptions" />
       <recent name="org.simbrella.loanservice.utils" />
     </key>
@@ -111,7 +128,54 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LoanServiceImplTest.getUser">
+  <component name="RunManager" selected="JUnit.LoanServiceImplTest">
+    <configuration name="LoanServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
+      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanServiceImplTest.applyForLoan" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
+      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
+      <option name="METHOD_NAME" value="applyForLoan" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="loan-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.simbrella.loanservice.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.simbrella.loanservice.services" />
+      <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
+      <option name="METHOD_NAME" value="applyForLoan_validRequest_returnsLoanApplicationResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoanServiceImplTest.getUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="loan-service" />
       <extension name="coverage">
@@ -124,32 +188,6 @@
       <option name="MAIN_CLASS_NAME" value="org.simbrella.loanservice.services.LoanServiceImplTest" />
       <option name="METHOD_NAME" value="getUser" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eureka-server" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.servicediscovery.EurekaServerApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.simbrella.servicediscovery.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="gateway-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.GatewayApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.simbrella.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,27 +206,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="loan-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.simbrella.loanservice.LoanApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.simbrella.loanservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoanServiceImplTest" />
+        <item itemvalue="JUnit.LoanServiceImplTest.applyForLoan_validRequest_returnsLoanApplicationResponse" />
         <item itemvalue="JUnit.LoanServiceImplTest.getUser" />
-        <item itemvalue="Spring Boot.LoanApplication" />
         <item itemvalue="Spring Boot.IdentityApplication" />
-        <item itemvalue="Spring Boot.GatewayApplication" />
-        <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="JUnit.LoanServiceImplTest.applyForLoan" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +224,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1735896360950</updated>
-      <workItem from="1735896361970" duration="65895000" />
+      <workItem from="1735896361970" duration="80798000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -250,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736018473122</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added: Update loan status functionality">
+      <option name="closed" value="true" />
+      <created>1736020037364</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736020037364</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +295,8 @@
     <MESSAGE value="Added: Apply for loan functionality" />
     <MESSAGE value="Added: Get user for loan validation functionality" />
     <MESSAGE value="Added: Get Loan details by user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: Get Loan details by user" />
+    <MESSAGE value="Added: Update loan status functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: Update loan status functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,6 @@
 package org.simbrella.loanservice.services;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.simbrella.loanservice.dtos.User;
@@ -26,6 +27,7 @@ import java.time.Period;
 import static org.simbrella.loanservice.models.LoanStatus.*;
 import static org.simbrella.loanservice.utils.LoanCalculator.calculateLoanDetails;
 import static org.simbrella.loanservice.utils.ValidationUtils.isValidEmail;
+import static org.simbrella.loanservice.utils.ValidationUtils.isValidPhoneNumber;
 
 @Slf4j
 public class LoanServiceImpl implements LoanService {
@@ -145,13 +147,17 @@ public class LoanServiceImpl implements LoanService {
 
     private LoanApplicationResponse mapToLoanApplicationResponse(Loan loan, User user) {
         LoanApplicationResponse response = modelMapper.map(loan, LoanApplicationResponse.class);
-        response.setFullName(user.getFirstName() + user.getLastName());
+        response.setFullName(user.getFirstName() +" "+ user.getLastName());
         return response;
     }
 
 
     private String getServiceUrl(String serviceName) {
-        return discoveryClient.getInstances(serviceName).stream().findFirst().map(instance -> instance.getUri().toString()).orElseThrow(() -> new RuntimeException("Service not found"));
+        return discoveryClient.getInstances(serviceName)
+                .stream()
+                .findFirst()
+                .map(instance -> instance.getUri().toString())
+                .orElseThrow(() -> new RuntimeException("Service not found"));
     }
 
 
@@ -161,7 +167,7 @@ public class LoanServiceImpl implements LoanService {
     }
 
     private void validatePhoneNumber(String phoneNumber) {
-        if (!isValidEmail(phoneNumber))
+        if (!isValidPhoneNumber(phoneNumber))
             throw new InvalidDetailsException(String.format("The phone number is not a valid one: %s", phoneNumber));
     }
 
@@ -174,7 +180,7 @@ public class LoanServiceImpl implements LoanService {
         }
     }
 
-    private void validateDetails(String email, LocalDate dob, String phoneNumber) {
+    void validateDetails(String email, LocalDate dob, String phoneNumber) {
         validateEmail(email);
         validatePhoneNumber(phoneNumber);
         validateDOB(dob);

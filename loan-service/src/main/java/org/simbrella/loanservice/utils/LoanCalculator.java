@@ -46,9 +46,9 @@ public class LoanCalculator {
         LoanCalculator calculator = new LoanCalculator();
 
         // Example loan application
-        BigDecimal loanAmount = BigDecimal.valueOf(10000);
-        Integer loanTermMonths = 24;
-        BigDecimal annualIncome = BigDecimal.valueOf(35000);
+        BigDecimal loanAmount = BigDecimal.valueOf(100_000);
+        Integer loanTermMonths = 4;
+        BigDecimal annualIncome = BigDecimal.valueOf(50_000);
 
         LoanDetails details = calculator.calculateLoanDetails(loanAmount, loanTermMonths, annualIncome);
 

@@ -1,6 +1,9 @@
 package org.simbrella.loanservice.dtos;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Data
 public class User {
@@ -10,4 +13,5 @@ public class User {
     private String lastName;
     private String email;
     private String phoneNumber;
+    private Role role;
 }
